@@ -2,28 +2,10 @@
 <button id="traditionalXhr" class="function">Traditional XHR</button>
 <button id="promiseXhr" class="function">Promise XHR</button>
 <button id="buildQueryPlugin" class="function">BuildQuery Plugin</button>
-
-<script>
-  /*!
-   * Build a query string from an object of data
-   * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
-   * @param  {Object} data The data to turn into a query string
-   * @return {String}      The query string
-   */
-  var buildQuery = function(data) {
-    if (typeof data === "string") return data;
-    var query = [];
-    for (var key in data) {
-      if (data.hasOwnProperty(key)) {
-        query.push(
-          encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-        );
-      }
-    }
-    return query.join("&");
-  };
-</script>
-
+<button id="innerHtmlbtn">innerHTML</button>
+<div id="innerHtml1"></div>
+<script src='buildquery.js' charset='utf-8' type='application/javascript'></script>
+<script src='innerhtml.js' charset='utf-8' type='application/javascript'></script>
 <script>
   // Listens to all clicks anywhere on the DOM
   window.addEventListener("click", function(event) {

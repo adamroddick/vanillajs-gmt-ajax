@@ -4,6 +4,8 @@ const path = require('path')
 const app = express()
 const port = 3001
 
+app.use(express.static('static'))
+
 const json = { 
     1: 'Adam',
     2: 'Ben',
@@ -18,7 +20,7 @@ const json2 = {
 }
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/index.html'))
+    res.sendFile(path.join(__dirname + '/static/index.html'))
 })
 
 app.get('/json', (req, res) => {
