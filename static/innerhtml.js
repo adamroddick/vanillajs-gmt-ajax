@@ -13,8 +13,12 @@ var jsonToInnerHTML = function() {
 
     div1.innerHTML = json.map(function (element) {
         var html = 
+        '<div class="card" style="width: 18rem; margin-top: 1.5rem;' +
+        '<div class="card-body">' +
         '<h3>' + element.title + '</h3>' +
         '<p>' + element.content + '</p>';
         return html;
-    }).join('');
+    }).join('') +
+    '</div>' +
+    '</div>';
 }

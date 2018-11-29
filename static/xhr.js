@@ -3,6 +3,7 @@ window.addEventListener("click", function(event) {
     // Only runs on buttons with the 'function' class
     if (event.target.matches("button.function")) {
       var id = event.target.id;
+      // Runs a function with the same name as the id of the button, cute
       window[id]();
     }
   });

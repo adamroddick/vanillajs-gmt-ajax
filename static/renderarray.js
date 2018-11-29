@@ -26,6 +26,8 @@ var jsonArrayToInnerHtml = function() {
     var div1 = document.querySelector('div#jsonArray1');
 
     div1.innerHTML = 
+            '<div class="card" style="width: 18rem; margin-top: 1.5rem;">' +
+            '<div class="card-body">' +
             '<h3>' + jsonArray.name + '\'s Posts' + '</h3>' +
             '<ul>' + 
             jsonArray.posts.map(function(post) {
@@ -34,6 +36,8 @@ var jsonArrayToInnerHtml = function() {
                 '<li>' + post.content + '</li>'
             return html;
             }).join('')
-            + '</ul>';
+            + '</ul>' +
+            '</div>' +
+            '</div>';
 
 }
