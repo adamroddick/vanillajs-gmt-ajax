@@ -30,7 +30,7 @@ var jsonArrayToInnerHtml = function() {
             '<ul>' + 
             jsonArray.posts.map(function(post) {
                 var html = 
-                '<li>' + post.postid + '</li>' +
+                '<b>Post: ' + post.postid + '</b>' +
                 '<li>' + post.content + '</li>'
             return html;
             }).join('')
